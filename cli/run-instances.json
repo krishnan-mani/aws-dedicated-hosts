@@ -1,0 +1,17 @@
+{
+  "ImageId": "ami-c481fad3",
+  "SecurityGroupIds": [
+    "REPLACE-WITH-SECURITY-GROUP-ID"
+  ],
+  "InstanceType": "m4.large",
+  "Placement": {
+    "AvailabilityZone": "us-east-1a",
+    "Tenancy": "host",
+    "HostId": "REPLACE-WITH-HOST-ID",
+    "Affinity": "host"
+  },
+  "Monitoring": {
+    "Enabled": true
+  },
+  "SubnetId": "REPLACE-WITH-SUBNET-ID"
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "ParameterKey": "SecurityGroupId",
+    "ParameterValue": "REPLACE-WITH-SECURITY-GROUP-ID"
+  },
+  {
+    "ParameterKey": "SubnetId",
+    "ParameterValue": "REPLACE-WITH-SUBNET-ID"
+  },
+  {
+    "ParameterKey": "HostId",
+    "ParameterValue": "REPLACE-WITH-HOST-ID"
+  },
+  {
+    "ParameterKey": "AMI",
+    "ParameterValue": "ami-c481fad3"
+  }
+]
+

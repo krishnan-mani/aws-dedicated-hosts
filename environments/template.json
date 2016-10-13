@@ -1,0 +1,45 @@
+{
+  "Parameters": {
+    "HostId": {
+      "Description": "Dedicated Host Id to run the instance on",
+      "Type": "String"
+    },
+    "AMI": {
+      "Description": "Amazon Machine Image Id",
+      "Type": "String"
+    },
+    "SecurityGroupId": {
+      "Description": "VPC Security Group Id",
+      "Type": "String"
+    },
+    "SubnetId": {
+      "Description": "VPC subnet Id",
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "instance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "Affinity": "host",
+        "AvailabilityZone": "us-east-1a",
+        "HostId": {
+          "Ref": "HostId"
+        },
+        "ImageId": {
+          "Ref": "AMI"
+        },
+        "InstanceType": "m4.large",
+        "SecurityGroupIds": [
+          {
+            "Ref": "SecurityGroupId"
+          }
+        ],
+        "SubnetId": {
+          "Ref": "SubnetId"
+        },
+        "Tenancy": "host"
+      }
+    }
+  }
+}
